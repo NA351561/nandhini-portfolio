@@ -1,8 +1,8 @@
 {
   "name": "portfolio",
-  "homepage": "https://na351561.github.io/nandhini-portfolio/",
-  "private": false,
-  "version": "0.0.0",
+  "homepage": "https://na351561.github.io/nandhini-portfolio",
+  "private": true,
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
