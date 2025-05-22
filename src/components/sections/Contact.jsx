@@ -16,9 +16,13 @@ export const Contact = () => {
             .sendForm(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, e.target, import.meta.env.VITE_PUBLIC_KEY)
             .then((result) => {
                 alert("Message Sent");
-                setFormData({ name: "", email: "", message: "" })
+                setFormData({ name: "", email: "", message: "" });
+                console.log(result);    
             })
-            .catch(() => alert("Oops Something went wrong. Please try again."))
+            .catch((err) => {
+                alert("Oops Something went wrong. Please try again.");
+                console.error(err);
+            })
     }
     return (
         <section id="contact" className="min-h-screen flex items-center justify-center py-20">
