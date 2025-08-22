@@ -58,10 +58,10 @@ export const About = () => {
               <ul className="text-yellow-900">
                 <li>
                   <strong>
-                    BE Computer science and Engineering (2012-2016)
+                    BE Computer Science and Engineering (2012-2016)
                   </strong>{" "}
                   - K.S.Rangasamy College of Technology, Tiruchengode,
-                  TamilNadu.
+                  Tamil Nadu.
                 </li>
               </ul>
             </div>
