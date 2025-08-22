@@ -1,72 +1,60 @@
 import { RevealOnScroll } from "../RevealOnScroll";
 export const Projects = () => {
-    return (
-        <section id="projects" className="min-h-scrren flex-items justify-center py-20">
-            <RevealOnScroll>
-                <div className="max-w-5xl mx-auto px-4">
-                    <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
-                        Featured Projects
-                    </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all">
-                            <h3 className="text-xl font-bold mb-2"> HPI </h3>
-                            <p className="text-gray-400 mb-4">Brief discriptio about the projects</p>
-                            <div className="flex flex-wrap gap-2 mb-4">
-                                {["React", "Node.js", "AAWS"].map((tech, key) => (
-                                    <span
-                                        key={key}
-                                        className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20
-                            hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition">
-                                        {tech}
-                                    </span>
-                                ))}
-                            </div>
+  const projectInfo = [
+    {
+      name: "HPI",
+      description:
+        "Led development of HP Smart Web App for printers using React.js, Jarvis Plugins & Veneer framework.",
+      techStack: ["React.js", "TypeScript", "Veneer", "REST APIs"],
+    },
+    {
+      name: "Diversey",
+      description:
+        "Led development of HP Smart Web App for printers using React.js, Jarvis Plugins & Veneer framework.",
+      techStack: ["React.js", "AWS", "Linux", "Automation Scripts"],
+    },
+    {
+      name: "Looking Glass",
+      description:
+        "Developed IoT platform for asset management using Core Java & Vertex. Integrated Neo4j for data storage and followed Agile practices.",
+      techStack: ["Core Java", "Vertex", "Neo4j", "JUnit", "Agile"],
+    },
+  ];
+  return (
+    <section
+      id="projects"
+      className="min-h-scrren flex-items justify-center py-20"
+    >
+      <RevealOnScroll>
+        <div className="max-w-5xl mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-yellow-600 to-yellow-400 bg-clip-text text-transparent text-center">
+            Featured Projects
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/*Project information */}
 
-                            <div className="flex justify-between items-center">
-                                <a href="#" className="text-blue-400 hover:text-blue-300 transition-colors my-4"> View Project → </a>
-                            </div>
-                        </div>
-
-                        <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all">
-                            <h3 className="text-xl font-bold mb-2"> Diversey </h3>
-                            <p className="text-gray-400 mb-4">Brief discriptio about the projects</p>
-                            <div className="flex flex-wrap gap-2 mb-4">
-                                {["React", "Node.js", "AAWS"].map((tech, key) => (
-                                    <span
-                                        key={key}
-                                        className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20
-                            hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition">
-                                        {tech}
-                                    </span>
-                                ))}
-                            </div>
-
-                            <div className="flex justify-between items-center">
-                                <a href="#" className="text-blue-400 hover:text-blue-300 transition-colors my-4"> View Project → </a>
-                            </div>
-                        </div>
-
-                        <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all">
-                            <h3 className="text-xl font-bold mb-2"> Looking Glass </h3>
-                            <p className="text-gray-400 mb-4">Brief discriptio about the projects</p>
-                            <div className="flex flex-wrap gap-2 mb-4">
-                                {["React", "Node.js", "AAWS"].map((tech, key) => (
-                                    <span
-                                        key={key}
-                                        className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20
-                            hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition">
-                                        {tech}
-                                    </span>
-                                ))}
-                            </div>
-
-                            <div className="flex justify-between items-center">
-                                <a href="#" className="text-blue-400 hover:text-blue-300 transition-colors my-4"> View Project → </a>
-                            </div>
-                        </div>
-                    </div>
+            {projectInfo.map(({ name, description, techStack }, index) => (
+              <div
+                key={index}
+                className="p-6 rounded-xl border border-yellow-900/10 hover:-translate-y-1 hover:shadow-[0_2px_8px_rgba(120,53,15,0.1)] transition-all"
+              >
+                <h3 className="text-xl font-bold mb-2">{name}</h3>
+                <p className="text-yellow-900 mb-4">{description}</p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {techStack.map((tech, key) => (
+                    <span
+                      key={key}
+                      className="bg-yellow-600/10 text-yellow-900 py-1 px-3 rounded-full text-sm hover:bg-yellow-600/20 hover:shadow-[0_2px_8px_rgba(120,53,15,0.2)] transition"
+                    >
+                      {tech}
+                    </span>
+                  ))}
                 </div>
-            </RevealOnScroll>
-        </section>
-    )
-}
+              </div>
+            ))}
+          </div>
+        </div>
+      </RevealOnScroll>
+    </section>
+  );
+};
