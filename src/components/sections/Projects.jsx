@@ -10,7 +10,7 @@ export const Projects = () => {
     {
       name: "Diversey",
       description:
-        "Led development of HP Smart Web App for printers using React.js, Jarvis Plugins & Veneer framework.",
+        "Provided L2 support, automated monitoring & optimized database queries. Collaborated on deployments & implemented system performance improvements.",
       techStack: ["React.js", "AWS", "Linux", "Automation Scripts"],
     },
     {
